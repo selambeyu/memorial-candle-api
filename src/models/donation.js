@@ -1,5 +1,4 @@
-const mongoose = require("mongoose");
-
+import mongoose from "mongoose";
 const DonationSchema = new mongoose.Schema({
   memorial_id: {
     type: mongoose.Schema.Types.ObjectId,
@@ -11,7 +10,7 @@ const DonationSchema = new mongoose.Schema({
     ref: "User",
     required: false,
   },
-  guest_id: { type: mongoose.Schema.Types.ObjectId, ref: "Guest" },
+
   donated_by: { type: String },
   personal_word: { type: String },
   amount: {
