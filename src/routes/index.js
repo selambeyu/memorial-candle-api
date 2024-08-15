@@ -12,6 +12,6 @@ indexRouter.use("/memorials", memorialRouter);
 indexRouter.use("/donations", donationRouter);
 
 indexRouter.get("/", (req, res) => {
-  res.send("Horay...Report Api is working. ");
+  res.send("Hooray...Memorial Candle Api is working. ");
 });
 export default indexRouter;
