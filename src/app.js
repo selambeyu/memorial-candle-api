@@ -18,6 +18,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use("/api/v1/", indexRouter);
 
+app.get("/", (req, res) => {
+  res.send("Yay...Memorial Candle Api is working. ");
+});
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
