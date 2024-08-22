@@ -6,7 +6,6 @@ export const createDonation = async (req, res) => {
     const {
       memorial_id,
       user_id,
-
       donated_by,
       personal_word,
       amount,
@@ -16,7 +15,6 @@ export const createDonation = async (req, res) => {
     const newDonation = new Donation({
       memorial_id,
       user_id,
-
       donated_by,
       personal_word,
       amount,

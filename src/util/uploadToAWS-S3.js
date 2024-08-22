@@ -15,7 +15,7 @@ const s3 = new S3({
 export const uploadFileToS3 = (fileField, upload_path) =>
   catchAsync(async (req, res, next) => {
     const file = req.file;
-    console.log("hi file", file);
+
     if (!file) return next();
 
     const upload_path_key = upload_path || process.env.AWS_S3_ROOT_UPLOAD_PATH;
@@ -28,7 +28,6 @@ export const uploadFileToS3 = (fileField, upload_path) =>
       req.body[fileField] = result.Location;
       return next();
     } catch (err) {
-      console.error("File upload middleware:", err);
       return next(new CustomError("File Upload Error", err));
     }
   });

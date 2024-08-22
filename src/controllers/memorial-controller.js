@@ -61,7 +61,6 @@ export const getAllMemorials = async (req, res) => {
       memorials,
     });
   } catch (error) {
-    console.log("what is error her", error);
     res.status(500).json({ message: "Server error" });
   }
 };
@@ -69,9 +68,8 @@ export const getAllMemorials = async (req, res) => {
 export const searchMemorials = async (req, res) => {
   try {
     // Get the search query from the request query string
-    console.log("hi serch", req.query);
+
     const { search = "" } = req.query;
-    console.log("hi serch", search);
 
     // Create a filter for the search functionality
     const searchFilter = search

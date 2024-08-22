@@ -1,5 +1,4 @@
 import express from "express";
-import mongoose from "mongoose";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import connectDB from "./config/db.js"; // Add `.js` extension
